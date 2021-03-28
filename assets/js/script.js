@@ -13,6 +13,16 @@ function saveFunction(a) {
 };
 
 
+// function refresh () {
+//     taskValueEl = localStorage.getItem('#hour-' + i + '');
+//     for (var i = 0; i < 24; i++) {
+//         var taskValue = getItem(taskValueEl[i]);
+//         console.log("task value: " + taskValue);
+//     };
+
+// };
+
+// refresh();
 
 
 //create varaible to hour format//
