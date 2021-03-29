@@ -1,4 +1,5 @@
 console.log("check");
+var textAreaEl = document.getElementsByClassName("textarea");
 
 //add code to store data to local stoage//
 
@@ -13,16 +14,16 @@ function saveFunction(a) {
 };
 
 
-// function refresh () {
-//     taskValueEl = localStorage.getItem('#hour-' + i + '');
-//     for (var i = 0; i < 24; i++) {
-//         var taskValue = getItem(taskValueEl[i]);
-//         console.log("task value: " + taskValue);
-//     };
+function refresh () {
+    for (var i = 0; i < 24; i++) {
+        var taskValueEl = localStorage.getItem('#hour-' + i + '');
+        console.log(taskValueEl);
+        if (taskValueEl != null) {
+            textAreaEl[i].textContent = taskValueEl;
+        };
+    };
 
-// };
-
-// refresh();
+};
 
 
 //create varaible to hour format//
@@ -48,7 +49,6 @@ var currentDayEl = document.getElementById('currentDay');
 currentDayEl.innerText = localDate;
 
 // find which row has is greater than, equal to or less than local time//
-var textAreaEl = document.getElementsByClassName("textarea");
 
 var hourEls = document.getElementsByClassName("hour");
 for (var i = 0; i < hourEls.length; i++) {
